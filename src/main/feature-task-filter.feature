@@ -13,3 +13,8 @@ Feature: Filtrar tareas por estado
     Given que el usuario tiene tareas con estados "pendiente" y "completada"
     When el usuario filtra por el estado "completada"
     Then solo se muestran las tareas con estado "completada"
+
+  Scenario: Limpiar el filtro
+    Given que el usuario aplicó un filtro por estado
+    When el usuario limpia el filtro
+    Then se muestran todas las tareas sin importar su estado
